@@ -15,7 +15,6 @@ export const exampleContextHook = () => {
 				`https://api.stackexchange.com/2.2/search?page=1&pagesize=99&order=desc&sort=activity&intitle=${text}&site=stackoverflow`
 			);
 			const json = await response.json();
-			debugger;
 			setData(json);
 		} catch (e) {
 			console.error(e);

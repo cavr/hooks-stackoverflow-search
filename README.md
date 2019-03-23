@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Stupid Example that search in StackOverflow using React Context Api and Hooks.
+Stupid Example that searchs in StackOverflow using React Context Api and Hooks.
 
 ## Available Scripts
 

@@ -21,7 +21,7 @@ const App = () => {
 					onChange={listItems.handleChange}
 				/>
 				<button style={{ marginLeft: '1rem' }} onClick={listItems.handleClick}>
-					Buscar
+					SEARCH
 				</button>
 			</div>
 			<List />
