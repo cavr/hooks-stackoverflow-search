@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { Provider } from './context/ExampleContext';
+import { exampleContextHook } from './context/ExampleContextHook';
 import './App.css';
+import { List } from './components/List';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => {
+	const listItems = exampleContextHook();
+
+	return (
+		<Provider value={listItems.data || {}}>
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					marginTop: '2rem'
+				}}>
+				<input
+					type="text"
+					value={listItems.text}
+					onChange={listItems.handleChange}
+				/>
+				<button style={{ marginLeft: '1rem' }} onClick={listItems.handleClick}>
+					Buscar
+				</button>
+			</div>
+			<List />
+		</Provider>
+	);
+};
 
 export default App;
