@@ -1,10 +1,6 @@
-import { useContext, useState, useEffect } from 'react';
-
-import { ExampleContext } from '../context/ExampleContext';
+import { useState } from 'react';
 
 export const exampleContextHook = () => {
-	const exampleContext = useContext(ExampleContext);
-
 	const [text, setText] = useState('');
 
 	const [data, setData] = useState([]);
@@ -30,12 +26,7 @@ export const exampleContextHook = () => {
 		setText(e.target.value);
 	};
 
-	useEffect(() => {
-		getList();
-	}, []);
-
 	return {
-		exampleContext,
 		data,
 		text,
 		handleChange,

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { exampleContextHook } from '../context/ExampleContextHook';
+import { useItems } from '../context/useItems';
 
-export const List = props => {
-	const exampleList = exampleContextHook();
+export const List = () => {
+	const exampleList = useItems();
 
 	const listDiv = (exampleList.exampleContext.items &&
 		exampleList.exampleContext.items.map((item, index) => (
